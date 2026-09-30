@@ -33,5 +33,10 @@ label.field { display:grid; gap:7px; color:var(--muted); font-size:13px; } label
 .conflict { display:grid; grid-template-columns:auto 1fr auto; gap:14px; align-items:start; padding:15px; border:1px solid #f2c1b5; border-radius:12px; background:#fff8f5; margin-bottom:10px; } .conflict .seal { padding:7px 9px; border-radius:8px; background:#f25f3a;color:#fff;font-weight:800; }
 .history { display:grid; gap:8px; } .history-row { display:grid; grid-template-columns:150px 120px 1fr; gap:12px; padding:11px 0; border-bottom:1px solid var(--line); font-size:14px; } .muted { color:var(--muted); }
 .draft-banner { padding:12px 14px; border-radius:10px; background:#fff4d8; border:1px solid #efcf83; display:flex; justify-content:space-between; align-items:center; gap:12px; }
+.scene.changed { border-color:#f0a868; background:#fff7ef; }
+.dot-changed { display:inline-block; margin-left:6px; font-style:normal; font-size:11px; font-weight:700; color:#b25e09; background:#ffe6cc; border-radius:99px; padding:1px 7px; vertical-align:middle; }
+.conflict.merge { border-color:#c3d4f2; background:#f4f8ff; } .conflict.merge .seal { background:#3a6ea5; }
+.conflict.override { border-color:#d9c3f2; background:#f8f4ff; } .conflict.override .seal { background:#6d4aa5; }
+.lock-tip { margin:12px 0 0; padding:10px 12px; border-radius:9px; background:#fff4d8; border:1px solid #efcf83; color:#8a6d1a; font-size:13px; line-height:1.6; }
 @media(max-width:980px){ .app-shell{grid-template-columns:1fr}.sidebar{position:static;height:auto;flex-direction:row;flex-wrap:wrap;align-items:center}.network-card{margin:0;width:100%}.grid-2{grid-template-columns:1fr}.metrics{grid-template-columns:repeat(2,1fr)} }
 @media(max-width:680px){ .main{padding:18px}.topbar{align-items:flex-start;flex-direction:column}.scene{grid-template-columns:1fr}.form-grid{grid-template-columns:1fr}.history-row{grid-template-columns:1fr}.metrics{grid-template-columns:1fr} }
