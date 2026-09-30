@@ -22,13 +22,13 @@ const isOnline = computed({
       </div>
       <nav>
         <RouterLink to="/" :class="{ active: route.name === 'schedule' }">◫ {{ t("schedule") }}</RouterLink>
-        <RouterLink to="/conflicts" :class="{ active: route.name === 'conflicts' }">△ {{ t("conflicts") }} <em>{{ store.conflicts.length }}</em></RouterLink>
+        <RouterLink to="/conflicts" :class="{ active: route.name === 'conflicts' }">△ {{ t("conflicts") }} <em>{{ store.conflicts.length + store.openPendingMerges.length }}</em></RouterLink>
         <RouterLink to="/history" :class="{ active: route.name === 'history' }">↺ {{ t("history") }}</RouterLink>
       </nav>
       <div class="network-card">
         <label>运行模式</label>
         <el-switch v-model="isOnline" active-text="在线" inactive-text="离线" />
-        <small>{{ isOnline ? "操作将写入本地工作区" : "请保存离线草稿，恢复后同步" }}</small>
+        <small>{{ isOnline ? "操作写入正式通告" : "以字段变更记录到离线草稿，恢复后三方合并" }}</small>
       </div>
     </aside>
     <main class="main">
